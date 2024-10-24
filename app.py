@@ -1,15 +1,13 @@
 import argparse
 
-
 def add(a, b):
     return a + b
-
 
 def subtract(a, b):
     return a - b
 
-
 if __name__ == "__main__":
+    # Create a command-line argument parser
     parser = argparse.ArgumentParser(description="Simple CLI Calculator")
 
     # Add positional arguments for the operation and the numbers
@@ -26,5 +24,5 @@ if __name__ == "__main__":
     elif args.operation == "subtract":
         result = subtract(args.num1, args.num2)
 
-    # Print the result
-    print(f"The result is: {result}")
+    # Print the result using format()
+    print("The result is: {}".format(result))
